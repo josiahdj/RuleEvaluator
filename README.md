@@ -8,13 +8,13 @@ This library was created to traverse a tree-structured set of atomic rules which
 The rules are represented this way:
 ```
 RuleContainer (e.g. Customer, User, Company, etc.)
-    \----RuleSet
-        \----Rule
-        \----Rule
-    \----RuleSet
-        \----RuleSet
-            \----Rule
-        \----Rule    
+    +--RuleSet
+        +--Rule
+        +--Rule
+    +--RuleSet
+        +--RuleSet
+            +--Rule
+        +--Rule    
 ```
 
 There is also a `RuleContext` (I genericized it for publication, but this could be a shopping cart or a user or anything that you want to determine eligibility about).
