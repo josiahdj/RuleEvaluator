@@ -12,6 +12,8 @@ RuleContainer (e.g. Customer, User, Company, etc.)
         \----Rule
         \----Rule
     \----RuleSet
+        \----RuleSet
+            \----Rule
         \----Rule    
 ```
 
