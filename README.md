@@ -9,8 +9,12 @@ The rules are represented this way:
 ```
 RuleContainer (e.g. Customer, User, Company, etc.)
     \----RuleSet
-      \----Rule
+        \----Rule
+        \----Rule
+    \----RuleSet
+        \----Rule    
 ```
 
-There is also a `RuleContext` (I genericized it for publication, but this could be a shopping cart or a user or anything that you want to 
-determine eligibility about).
+There is also a `RuleContext` (I genericized it for publication, but this could be a shopping cart or a user or anything that you want to determine eligibility about).
+
+I've included some sample rules in the Rules folder.
