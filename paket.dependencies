@@ -1,0 +1,6 @@
+source https://api.nuget.org/v3/index.json
+source https://www.nuget.org/api/v2/
+framework >= net461
+
+nuget AutoMapper 4.1.1
+nuget log4net 2.0.5
