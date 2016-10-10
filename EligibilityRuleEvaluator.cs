@@ -75,13 +75,15 @@ namespace EligibilityRuleEvaluator {
 		}
 
         /// <summary>
-        /// This is the thing that does all the "real" work. It recursively evaluates the rules and returns a true/false for isEligible/isNotEligible
+        /// This is the thing that does all the "real" work. It recursively evaluates the rules and returns a true/false for is/isn't eligible. Also rolls up
+        /// individual rule evaluation results (for diagnostics and/or UI display) in <paramref name="resultSetResult"/>.<code>RuleResults</code> (List of <see cref="EligibilityRuleResult"/>)
         /// </summary>
         /// <param name="ruleSet">the rule holder (the node)</param>
         /// <param name="ruleContext">the thing to which we're applying the rules</param>
         /// <param name="combinator">the 'either', 'both', or 'neither' that is used to aggregate the individual rule results into a single result for the whole ruleSet tree</param>
-        /// <param name="resultSetResult">this is an accumulator of sorts, to hold the rule results so that they can be displayed to a human, rule by rule (i.e. why this context passed/failed the evaluation)</param>
-        /// <returns>true for isEligible, false for isNotEligible</returns>
+        /// <param name="resultSetResult">this is an result accumulator of sorts, to hold the rule results so that they can be displayed to a human, rule by rule (i.e. why this context 
+        /// passed/failed the evaluation)</param>
+        /// <returns>true for Is Eligible, false for Is Not Eligible</returns>
 		private bool aggregateRules(EligibilityRuleSet ruleSet, RuleContext ruleContext, Func<bool, bool, bool> combinator, ref EligibilityResult resultSetResult) {
 			EligibilityResult result = resultSetResult;
 			Func<bool, IEligibilityRule, bool> ruleEvalFunc =
