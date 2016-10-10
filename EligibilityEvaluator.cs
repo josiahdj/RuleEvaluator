@@ -29,10 +29,10 @@ namespace EligibilityRuleEvaluator {
 			if (ruleContext == null)
 				throw new ArgumentNullException(nameof(ruleContext));
 
-			return computeReleaseEligibility(ruleContext, eligibilityType);
+			return computeEligibility(ruleContext, eligibilityType);
 		}
 
-		private EligibilityResult computeReleaseEligibility(RuleContext ruleContext, EligibilityTypeEnum eligibilityType) {
+		private EligibilityResult computeEligibility(RuleContext ruleContext, EligibilityTypeEnum eligibilityType) {
 
 			var rootRuleSet = _ruleSetBuilder.BuildRootRuleSet(ruleContext.RuleContainer, eligibilityType);
 

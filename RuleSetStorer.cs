@@ -41,7 +41,7 @@ namespace EligibilityRuleEvaluator {
 			var ruleSetId = _eligibilityRepository.CreateRuleSet(ruleSetPoco);
 
 			foreach (var rule in ruleSet.Rules) {
-				_ruleStorer.saveRule(user, rule, ruleSetId);
+				_ruleStorer.SaveRule(user, rule, ruleSetId);
 			}
 
 			foreach (var childRuleSet in ruleSet.ChildRuleSets) {

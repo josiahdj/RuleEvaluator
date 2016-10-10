@@ -10,7 +10,7 @@ namespace EligibilityRuleEvaluator {
 
 		public RuleStorer(IEligibilityRepository eligibilityRepository) { _eligibilityRepository = eligibilityRepository; }
 
-		public int saveRule(SystemUser user, IEligibilityRule rule, int ruleSetId) {
+		public int SaveRule(SystemUser user, IEligibilityRule rule, int ruleSetId) {
 			if (rule == null)
 				throw new ArgumentNullException(nameof(rule));
 
